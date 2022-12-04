@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@styles": ["styles"],
+      "@styles/*": ["styles/*"],
+      "@providers": ["providers"],
+      "@providers/*": ["providers/*"],
+      "@hooks": ["hooks"],
+      "@hooks/*": ["hooks/*"],
+      "@page-transitions": ["page-transitions"],
+      "@page-transitions/*": ["page-transitions/*"]
+    }
+  }
+}
