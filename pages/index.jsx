@@ -14,9 +14,15 @@ export default function Home() {
           <div className={`${styles.LogoText}`}>LogoText</div>
           <div className={`${styles.NavlistWrapper}`}>
             <ul className={`${styles.Navlist}`}>
-              <li className={`${styles.NavItem}`}>Work</li>
-              <li className={`${styles.NavItem}`}>About</li>
-              <li className={`${styles.NavItem}`}>Contact</li>
+              <li className={`${styles.NavItem}`}>
+                <a href='#projects'>Work</a>
+              </li>
+              <li className={`${styles.NavItem}`}>
+                <a href='#about'>About</a>
+              </li>
+              <li className={`${styles.NavItem}`}>
+                <a href='#contact'>Contact</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -29,7 +35,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className={styles.Projects}>
+      <section id='projects' className={styles.Projects}>
         <div className={`${styles.ProjectsInner}`}>
           <div className={`${styles.GridItem}`}></div>
           <div className={`${styles.GridItem}`}></div>
@@ -38,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.AboutBlurb}`}>
+      <section id='about' className={`${styles.AboutBlurb}`}>
         <div className={`${styles.AboutBlurbInner}`}>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe et
@@ -51,7 +57,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
+      <footer id='contact'>
         <div className={`${styles.FooterInner}`}>
           <a href=''>email@email.com</a>
           <p>Address 123, 123 StreetName Street</p>
