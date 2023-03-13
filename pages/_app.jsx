@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <PageTransitions route={router.asPath}>
       <Navbar />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
       <Footer />
     </PageTransitions>
   );

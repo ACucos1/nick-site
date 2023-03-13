@@ -14,12 +14,15 @@ export const Navbar = () => {
               <Link href='/'>Work</Link>
             </li>
             <li className={`${styles.NavItem} fade-in`}>
-              <Link href='/'>About</Link>
+              <Link href='/about'>About</Link>
             </li>
             <li className={`${styles.NavItem} fade-in`}>
               <Link href='/contact'>Contact</Link>
             </li>
           </ul>
+        </div>
+        <div className={styles.Burger}>
+          <div className={styles.BurgerInner}></div>
         </div>
       </div>
     </nav>

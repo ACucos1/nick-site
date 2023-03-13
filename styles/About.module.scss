@@ -1,0 +1,70 @@
+.About {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .AboutInner {
+    padding-top: calc(var(--navbar-height) * 2);
+    max-width: var(--max-width);
+
+    .Header {
+      padding-inline: 1rem;
+      h1 {
+        font-size: 42px;
+        //   width: 60%;
+      }
+
+      button {
+        margin-block-start: 2rem;
+      }
+    }
+
+    .Roadmap {
+      padding-top: calc(var(--navbar-height) * 2);
+      min-height: 500px;
+      h2 {
+        font-size: 38px;
+      }
+
+      .RoadmapCardWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        // padding: 2rem;
+        .RoadmapCard {
+          height: 300px;
+          width: 300px;
+          background-color: blue;
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .About {
+    .AboutInner {
+      .Header {
+        margin-inline: 2rem;
+        h1 {
+          font-size: 28px;
+        }
+      }
+
+      .Roadmap {
+        h2 {
+          font-size: 24px;
+        }
+        .RoadmapCardWrapper {
+          .RoadmapCard {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}

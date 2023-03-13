@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import styles from "../styles/Home.module.scss";
@@ -78,10 +79,18 @@ export default function Home() {
 
       <section id='projects' className={styles.Projects}>
         <div className={`${styles.ProjectsInner} fade-in`}>
-          <div className={`${styles.GridItem} fade-in`}></div>
-          <div className={`${styles.GridItem} fade-in`}></div>
-          <div className={`${styles.GridItem} fade-in`}></div>
-          <div className={`${styles.GridItem} fade-in`}></div>
+          <Link href='/project1'>
+            <div className={`fade-in`}></div>
+          </Link>
+          <Link href='/project2'>
+            <div className={`fade-in`}></div>
+          </Link>
+          <Link href='/project4'>
+            <div className={`fade-in`}></div>
+          </Link>
+          <Link href='/project5'>
+            <div className={`fade-in`}></div>
+          </Link>
         </div>
       </section>
 

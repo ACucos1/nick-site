@@ -40,13 +40,63 @@
         }
       }
     }
+
+    .Burger {
+      // background-color: red;
+      // border: 1px solid black;
+      height: 30px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      display: none;
+      .BurgerInner {
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        border-radius: 100px;
+        &::after,
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          border-radius: 100px;
+        }
+
+        &::after {
+          background-color: black;
+          top: 0%;
+          left: 0;
+        }
+
+        &::before {
+          background-color: black;
+          left: 0;
+          bottom: 0%;
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    .Navbar {
-      display: none;
+  .Navbar {
+    // display: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .Navbar {
+    .NavbarInner {
+      .Navlist {
+        display: none;
+      }
+      .Burger {
+        display: flex;
+      }
     }
   }
 }
