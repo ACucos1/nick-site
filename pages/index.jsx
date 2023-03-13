@@ -47,16 +47,14 @@ export default function Home() {
       }, delta);
     };
 
-    window.onload = function () {
-      var elements = document.querySelectorAll(".typewrite");
-      for (let i = 0; i < elements.length; i++) {
-        let toRotate = elements[i].getAttribute("data-type");
-        let period = elements[i].getAttribute("data-period");
-        if (toRotate) {
-          new TextType(elements[i], JSON.parse(toRotate), period);
-        }
+    var elements = document.querySelectorAll(".typewrite");
+    for (let i = 0; i < elements.length; i++) {
+      let toRotate = elements[i].getAttribute("data-type");
+      let period = elements[i].getAttribute("data-period");
+      if (toRotate) {
+        new TextType(elements[i], JSON.parse(toRotate), period);
       }
-    };
+    }
   }, []);
 
   return (
@@ -73,8 +71,7 @@ export default function Home() {
             className={`${styles.HeroText} typewrite`}
             data-period='2000'
             data-type='["Workflows.", "Processes.", "Businesses."]'>
-            We create{" "}
-            <span className={`${styles.TypeText}`}>textwillchange.</span>
+            We create <span className={`${styles.TypeText}`}></span>
           </div>
         </div>
       </section>
