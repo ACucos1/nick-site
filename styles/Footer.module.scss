@@ -1,0 +1,12 @@
+.Footer {
+  height: 20vh;
+  padding: 0 3rem;
+  .FooterInner {
+    max-width: 1301px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

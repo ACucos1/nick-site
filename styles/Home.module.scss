@@ -1,61 +1,27 @@
 .container {
   position: relative;
   // width: 100vw;
-  .Navbar {
-    width: 100%;
-    position: absolute;
-    box-sizing: border-box;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    padding-top: 3vw;
-    z-index: 100;
-
-    .NavbarInner {
-      margin: auto;
-      max-width: 1301px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .LogoText {
-        font-size: 28px;
-      }
-
-      .Navlist {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .NavItem {
-          text-transform: uppercase;
-          padding: 0 1rem;
-          font-weight: 100;
-          font-size: 24px;
-
-          &:last-child {
-            padding-right: 0;
-          }
-        }
-      }
-    }
-  }
 
   .Main {
-    height: max(95vh, 800px);
-    padding: 0 3vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     .MainInner {
-      min-height: 100%;
       margin: auto;
-      max-width: 1301px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      width: var(--max-width);
+      // display: flex;
+      // align-items: center;
+      // justify-content: flex-start;
       white-space: normal;
 
       .HeroText {
         font-size: calc(4.2 * 1rem);
         font-weight: 600;
         word-break: break-all;
+
+        .TypeText {
+          pointer-events: none;
+        }
       }
     }
   }
@@ -104,27 +70,10 @@
       }
     }
   }
-
-  footer {
-    height: 20vh;
-    padding: 0 3rem;
-    .FooterInner {
-      max-width: 1301px;
-      margin: 0 auto;
-
-      a {
-        text-decoration: underline;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 767px) {
   .container {
-    .Navbar {
-      display: none;
-    }
-
     .Projects {
       .ProjectsInner {
         grid-template-columns: 1fr;

@@ -1,0 +1,52 @@
+.Navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  position: absolute;
+  box-sizing: border-box;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 3vw;
+  z-index: 1000;
+
+  .NavbarInner {
+    margin: auto;
+    max-width: 1301px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .LogoText {
+      font-size: 28px;
+    }
+
+    .Navlist {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .NavItem {
+        text-transform: uppercase;
+        padding: 0 1rem;
+        font-weight: 100;
+        font-size: 18px;
+        font-family: var(--secondary-font);
+
+        a {
+          font-family: inherit;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    .Navbar {
+      display: none;
+    }
+  }
+}

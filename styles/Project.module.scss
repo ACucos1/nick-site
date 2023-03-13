@@ -1,0 +1,30 @@
+.Project {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ProjectInner {
+    max-width: var(--max-width);
+    padding-top: calc(var(--navbar-height) * 2);
+    h1 {
+      max-width: 50%;
+    }
+
+    & > * {
+      padding-block: 3rem;
+    }
+
+    .MainImage {
+      width: 100%;
+    }
+
+    .SOW {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
