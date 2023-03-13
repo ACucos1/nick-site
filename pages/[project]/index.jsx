@@ -6,7 +6,7 @@ export default function Project() {
     <main className={styles.Project}>
       <div className={styles.ProjectInner}>
         <h3>Category Tag</h3>
-        <h1>
+        <h1 className={styles.MainHeader}>
           Creating &amp; managing a digital presence for thought leaders in the
           holistic health space.
         </h1>
@@ -17,7 +17,7 @@ export default function Project() {
           alt='Header Image'
         />
 
-        <p>
+        <p className={styles.TextBlock}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam animi
           atque officiis accusantium veritatis quas, facere dolorum quo, rerum
           quasi ut obcaecati suscipit, magni repellendus earum placeat pariatur!
@@ -26,9 +26,13 @@ export default function Project() {
           minus impedit soluta quidem ex est veniam?
         </p>
 
-        <img src='' alt='Example Image' />
+        <img
+          className={styles.MainImage}
+          src='/monday.jpg'
+          alt='Example Image'
+        />
 
-        <div>
+        <div className={styles.TextBlock}>
           <h1>Header 2</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nobis
@@ -41,12 +45,12 @@ export default function Project() {
         </div>
 
         <div className={styles.ImageList}>
-          <img src='' alt='Example Images' />
-          <img src='' alt='Example Images' />
-          <img src='' alt='Example Images' />
+          <img src='/monday.jpg' alt='Example Image' />
+          <img src='/monday1.png' alt='Example Image' />
+          <img src='/monday2.png' alt='Example Image' />
         </div>
 
-        <div>
+        <div className={styles.TextBlock}>
           <h1>Header 3</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nobis
@@ -58,14 +62,14 @@ export default function Project() {
           </p>
         </div>
 
-        <div>
-          <img src='' alt='Example Image' />
-          <img src='' alt='Example Image' />
-          <img src='' alt='Example Image' />
-          <img src='' alt='Example Image' />
+        <div className={styles.ImageGrid}>
+          <img src='/monday.jpg' alt='Example Image' />
+          <img src='/monday1.png' alt='Example Image' />
+          <img src='/monday2.png' alt='Example Image' />
+          <img src='/monday.jpg' alt='Example Image' />
         </div>
 
-        <div>
+        <div className={styles.TextBlock}>
           <h1>Header 4</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nobis
@@ -77,6 +81,7 @@ export default function Project() {
           </p>
         </div>
 
+        <h1 className={styles.CenterHeader}>Scope of Work</h1>
         <div className={styles.SOW}>
           <div>
             <img src='' alt='' />

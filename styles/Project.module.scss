@@ -4,20 +4,67 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  img {
+    border: 1px solid black;
+  }
   .ProjectInner {
     max-width: var(--max-width);
     padding-top: calc(var(--navbar-height) * 2);
+    display: flex;
+    flex-direction: column;
     h1 {
-      max-width: 50%;
+      max-width: 70%;
     }
 
     & > * {
       padding-block: 3rem;
     }
 
+    .CenterHeader {
+      align-self: center;
+    }
+
     .MainImage {
       width: 100%;
+    }
+
+    .TextBlock {
+      width: 50%;
+      align-self: center;
+    }
+
+    .ImageList {
+      align-self: center;
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        max-width: 30%;
+        padding-inline: 1rem;
+      }
+    }
+
+    .ImageGrid {
+      align-self: center;
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, max(300px, 100%/3)), 1fr)
+      );
+      gap: 20px;
+      margin-bottom: 8rem;
+      img {
+        max-width: 100%;
+        // height: 100%;
+        height: 100%;
+        // margin: 0.5rem;
+        border: 1px solid black;
+
+        &:nth-child(2n) {
+          // margin-top: 30%;
+          margin-top: 8rem;
+        }
+      }
     }
 
     .SOW {
@@ -25,6 +72,43 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+
+      div {
+        // width: 15%;
+        background-color: red;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Project .ProjectInner {
+    .TextBlock {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Project .ProjectInner {
+    h3 {
+      // align-self: center;
+      max-width: 90%;
+      align-self: center;
+    }
+    h1 {
+      &.MainHeader {
+        font-size: 22px;
+        align-self: center;
+        max-width: 90%;
+      }
+    }
+    .ImageGrid {
+      img {
+        &:nth-child(2n) {
+          margin-top: 0;
+        }
+      }
     }
   }
 }
