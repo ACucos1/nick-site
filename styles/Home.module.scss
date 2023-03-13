@@ -88,7 +88,7 @@
         grid-template-rows: repeat(4, 1fr);
         gap: 2rem;
 
-        .GridItem {
+        a {
           &:nth-child(2),
           &:nth-child(4) {
             margin-top: 0;
