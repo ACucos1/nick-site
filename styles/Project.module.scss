@@ -4,9 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    border: 1px solid black;
-  }
+
   .ProjectInner {
     max-width: var(--max-width);
     padding-top: calc(var(--navbar-height) * 2);
@@ -26,6 +24,8 @@
 
     .MainImage {
       width: 100%;
+      background-color: #111111;
+      padding: 3rem;
     }
 
     .TextBlock {
@@ -35,12 +35,15 @@
 
     .ImageList {
       align-self: center;
+      justify-content: center;
       display: flex;
       flex-wrap: wrap;
 
       img {
-        max-width: 30%;
-        padding-inline: 1rem;
+        max-width: 400px;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: #181818;
       }
     }
 
