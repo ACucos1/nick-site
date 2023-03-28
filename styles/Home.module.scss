@@ -43,7 +43,19 @@
       a {
         height: 100%;
         width: 100%;
-        background-color: blue;
+        background-color: rgb(34, 34, 34);
+        overflow: hidden;
+
+        &:nth-child(1) {
+          background-color: #2f0033;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          padding-inline: 3rem;
+        }
 
         &:nth-child(2),
         &:nth-child(4) {

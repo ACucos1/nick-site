@@ -28,7 +28,7 @@ export default function Home() {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
       }
 
-      this.el.innerHTML = `We Create <span className={styles.TypeText}>${this.txt}</span>`;
+      this.el.innerHTML = `We create <span className={styles.TypeText}>${this.txt}</span>`;
 
       var that = this;
       var delta = 200 - Math.random() * 100;
@@ -71,7 +71,7 @@ export default function Home() {
           <div
             className={`${styles.HeroText} typewrite`}
             data-period='2000'
-            data-type='["Workflows.", "Processes.", "Businesses."]'>
+            data-type='["beauty.", "elegance.", "simplicity."]'>
             We create <span className={`${styles.TypeText}`}></span>
           </div>
         </div>
@@ -80,10 +80,10 @@ export default function Home() {
       <section id='projects' className={styles.Projects}>
         <div className={`${styles.ProjectsInner} fade-in`}>
           <Link href='/project1'>
-            <div className={`fade-in`}></div>
+            <img src='/images/pcc.png' className={`fade-in`} />
           </Link>
           <Link href='/project2'>
-            <div className={`fade-in`}></div>
+            <img src='/images/charisma.png' className={`fade-in`} />
           </Link>
           <Link href='/project4'>
             <div className={`fade-in`}></div>
@@ -97,12 +97,11 @@ export default function Home() {
       <section id='about' className={`${styles.AboutBlurb}`}>
         <div className={`${styles.AboutBlurbInner} fade-in`}>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe et
-            libero amet rerum, animi repellat dolores similique accusamus.
-            Repellendus cupiditate ex commodi, libero provident voluptatum!
-            Magnam reprehenderit delectus amet, exercitationem explicabo, id
-            distinctio culpa quod quis quae quisquam. Rem saepe adipisci enim
-            asperiores quos esse ab accusamus quam commodi dolorum.
+            ANS Creative is a Canadian-based creative agency dedicated to
+            transforming your online presence through the power of cutting-edge
+            design. Specializing in innovative web design and development, our
+            expert team works passionately to create visually striking and
+            seamlessly functional digital experiences.
           </p>
         </div>
       </section>
