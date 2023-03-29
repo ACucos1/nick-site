@@ -6,7 +6,7 @@ export const Navbar = () => {
     <nav className={`${styles.Navbar}`}>
       <div className={`${styles.NavbarInner}`}>
         <div className={`${styles.LogoText} fade-in`}>
-          <Link href='/'>LogoText</Link>
+          <Link href='/'>BigUpCommerce</Link>
         </div>
         <div className={`${styles.NavlistWrapper}`}>
           <ul className={`${styles.Navlist}`}>

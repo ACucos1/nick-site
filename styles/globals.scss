@@ -41,6 +41,11 @@ a {
   font-family: var(--main-font);
 }
 
+h2 {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
+
 button.btn-primary {
   font-family: var(--secondary-font);
   background-color: blue;
@@ -67,7 +72,7 @@ button.btn-primary {
 /* RTG Animations */
 .transition-component {
   position: absolute;
-  width: 100%;
+  min-width: 100%;
   // background-color: red;
   top: 0;
   left: 0;

@@ -10,7 +10,7 @@
 
   .NavbarInner {
     margin: auto;
-    max-width: 1301px;
+    max-width: var(--max-width);
     display: flex;
     align-items: center;
     justify-content: space-between;
