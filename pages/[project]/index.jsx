@@ -122,7 +122,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { project: projectParam } = context.params;
-  console.log(projectParam);
+
   const projects = {
     "charisma-social": {
       img1: "/images/charisma.png",
@@ -150,6 +150,34 @@ export async function getStaticProps(context) {
       body3: `Working closely with a third-party designer, we integrated the provided designs into the front-end of the Charisma Social website. 
               These designs focused on creating an engaging and intuitive user interface, 
               which allows users to navigate the platform with ease while also enjoying a visually captivating experience.`,
+      heading4: null,
+      body4: null,
+      scope: [],
+    },
+    "point-cloud-creative": {
+      img1: "/images/pcc.png",
+      img2: "/images/pcc2.png",
+      img3: "/images/pcc-intro-animation.gif",
+      img4: "/images/pcc-menu-animation.gif",
+      img5: "s",
+      img6: null,
+      img7: null,
+      img8: null,
+      img9: null,
+      categoryTag: "Website Design & Development",
+      title:
+        "Point Cloud Creative: Crafting an Ultra-Sleek, Interactive, and Modern Website",
+      body1: `Point Cloud Creative, a cutting-edge augmented reality design agency, sought to revamp its online presence with an ultra-sleek, 
+              modern, and interactive website that would not only showcase its services but also serve as a testament to its design prowess. 
+              This case study explores the creation of the website, characterized by sleek minimalist features, seamless animations,
+              and interactivity at every turn, all powered by a headless content management system.`,
+      heading2: "Design and Development",
+      body2: `The design process focused on creating a visually striking, minimalist layout that exudes modernity and sophistication. 
+              We achieved this through the use of clean lines, ample white space, and a harmonious color palette that reflects Point Cloud Creative's
+               brand identity. To further enhance the user experience, we ensured that almost every element on the website was interactive, 
+              promoting user engagement and encouraging exploration.`,
+      heading3: null,
+      body3: null,
       heading4: null,
       body4: null,
       scope: [],
