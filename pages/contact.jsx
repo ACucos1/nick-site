@@ -6,12 +6,9 @@ export default function contact() {
       <div className={styles.ContactInner}>
         <h1>Let&apos;s get started</h1>
         <div className={styles.Blurb}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-          consequatur culpa! Quibusdam soluta, voluptatem quidem ipsam dolorum
-          excepturi architecto fugiat nihil cumque, ut odit similique alias rem
-          repudiandae! In corporis exercitationem sequi sunt qui placeat impedit
-          debitis? Libero impedit quam quis possimus aliquid vel sunt
-          perferendis mollitia fugit laudantium! Incidunt!
+          Unlock your Ecommerce business’s full potential today by scheduling a
+          free consultation, and transform your Ecommerce business into a well
+          oiled machine!
         </div>
         <form
           className={styles.ContactForm}
