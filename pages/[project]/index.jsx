@@ -1,23 +1,35 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "@styles/Project.module.scss";
-import { useEffect } from "react";
+import { ColorExtractor } from "react-color-extractor";
+import { useEffect, useState } from "react";
 
 export default function Project({ project }) {
-  useEffect(() => {
-    console.log(project);
-  }, []);
+  const [colors, setColors] = useState([]);
 
+  const getColors = (colors) => setColors((prev) => [...prev, ...colors]);
+
+  useEffect(() => {
+    // console.log(project);
+    console.log(colors);
+    const imgs = document.querySelectorAll("img");
+    imgs.forEach((img) => {
+      img.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+    });
+  }, [colors]);
   return (
     <main className={styles.Project}>
       <div className={styles.ProjectInner}>
         <h3>{project.categoryTag}</h3>
         <h1 className={styles.MainHeader}>{project.title}</h1>
 
-        <img
-          className={styles.MainImage}
-          src={project.img1}
-          alt='Header Image'
-        />
+        <ColorExtractor getColors={getColors}>
+          <img
+            className={styles.MainImage}
+            src={project.img1}
+            alt='Header Image'
+          />
+        </ColorExtractor>
 
         <p className={styles.TextBlock}>{project.body1}</p>
 
@@ -159,7 +171,7 @@ export async function getStaticProps(context) {
       img2: "/images/pcc2.png",
       img3: "/images/pcc-intro-animation.gif",
       img4: "/images/pcc-menu-animation.gif",
-      img5: "s",
+      img5: "/images/pcc-intro-animation.gif",
       img6: null,
       img7: null,
       img8: null,
