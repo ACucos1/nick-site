@@ -65,10 +65,10 @@ export default function Project({ project }) {
 
         {project.img6 && project.img7 && project.img8 && project.img9 && (
           <div className={styles.ImageGrid}>
-            <img src='/monday.jpg' alt='Example Image' />
-            <img src='/monday1.png' alt='Example Image' />
-            <img src='/monday2.png' alt='Example Image' />
-            <img src='/monday.jpg' alt='Example Image' />
+            <img src={project.img6} alt='Example Image' />
+            <img src={project.img7} alt='Example Image' />
+            <img src={project.img8} alt='Example Image' />
+            <img src={project.img9} alt='Example Image' />
           </div>
         )}
 
@@ -172,10 +172,10 @@ export async function getStaticProps(context) {
       img3: "/images/pcc-intro-animation.gif",
       img4: "/images/pcc-menu-animation.gif",
       img5: "/images/pcc-intro-animation.gif",
-      img6: null,
-      img7: null,
-      img8: null,
-      img9: null,
+      img6: "/images/sanitycms.png",
+      img7: "/images/sanitycms2.png",
+      img8: "/images/sanitycms3.png",
+      img9: "/images/sanitycms4.png",
       categoryTag: "Website Design & Development",
       title:
         "Point Cloud Creative: Crafting an Ultra-Sleek, Interactive, and Modern Website",
@@ -188,8 +188,10 @@ export async function getStaticProps(context) {
               We achieved this through the use of clean lines, ample white space, and a harmonious color palette that reflects Point Cloud Creative's
                brand identity. To further enhance the user experience, we ensured that almost every element on the website was interactive, 
               promoting user engagement and encouraging exploration.`,
-      heading3: null,
-      body3: null,
+      heading3: "Headless CMS Integration:",
+      body3: `To provide Point Cloud Creative with the flexibility and adaptability required to maintain their website's content, 
+              we implemented a headless content management system (CMS). This approach decouples the front-end presentation layer from the back-end content management, 
+              allowing the client to make updates and changes to their website with ease, without affecting the overall design and functionality.`,
       heading4: null,
       body4: null,
       scope: [],
