@@ -1,60 +1,66 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   const router = useRouter();
 
-  useEffect(() => {
-    function TextType(el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = "";
-      this.tick();
-      this.isDeleting = false;
-    }
+  // useEffect(() => {
+  //   function TextType(el, toRotate, period) {
+  //     this.toRotate = toRotate;
+  //     this.el = el;
+  //     this.loopNum = 0;
+  //     this.period = parseInt(period, 10) || 2000;
+  //     this.txt = "";
+  //     this.tick();
+  //     this.isDeleting = false;
+  //   }
 
-    TextType.prototype.tick = function () {
-      var i = this.loopNum % this.toRotate.length;
-      var fullTxt = this.toRotate[i];
+  //   TextType.prototype.tick = function () {
+  //     var i = this.loopNum % this.toRotate.length;
+  //     var fullTxt = this.toRotate[i];
 
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
+  //     if (this.isDeleting) {
+  //       this.txt = fullTxt.substring(0, this.txt.length - 1);
+  //     } else {
+  //       this.txt = fullTxt.substring(0, this.txt.length + 1);
+  //     }
 
-      this.el.innerHTML = `We create <span className={styles.TypeText}>${this.txt}</span>`;
+  //     this.el.innerHTML = `We create <span className={styles.TypeText}>${this.txt}</span>`;
 
-      var that = this;
-      var delta = 200 - Math.random() * 100;
-      if (this.isDeleting) delta /= 2;
+  //     var that = this;
+  //     var delta = 200 - Math.random() * 100;
+  //     if (this.isDeleting) delta /= 2;
 
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === "") {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
+  //     if (!this.isDeleting && this.txt === fullTxt) {
+  //       delta = this.period;
+  //       this.isDeleting = true;
+  //     } else if (this.isDeleting && this.txt === "") {
+  //       this.isDeleting = false;
+  //       this.loopNum++;
+  //       delta = 500;
+  //     }
 
-      setTimeout(() => {
-        that.tick();
-      }, delta);
-    };
+  //     setTimeout(() => {
+  //       that.tick();
+  //     }, delta);
+  //   };
 
-    var elements = document.querySelectorAll(".typewrite");
-    for (let i = 0; i < elements.length; i++) {
-      let toRotate = elements[i].getAttribute("data-type");
-      let period = elements[i].getAttribute("data-period");
-      if (toRotate) {
-        new TextType(elements[i], JSON.parse(toRotate), period);
-      }
+  //   var elements = document.querySelectorAll(".typewrite");
+  //   for (let i = 0; i < elements.length; i++) {
+  //     let toRotate = elements[i].getAttribute("data-type");
+  //     let period = elements[i].getAttribute("data-period");
+  //     if (toRotate) {
+  //       new TextType(elements[i], JSON.parse(toRotate), period);
+  //     }
+  //   }
+  // }, []);
+  
+  const heroInput = useCallback((inputElement) => {
+    if (inputElement) {
+      inputElement.focus();
     }
   }, []);
 
@@ -68,11 +74,14 @@ export default function Home() {
 
       <section className={styles.Main}>
         <div className={`${styles.MainInner} fade-in`}>
-          <div
+          {/* <div
             className={`${styles.HeroText} typewrite`}
             data-period='2000'
             data-type='["beauty.", "elegance.", "simplicity."]'>
             We create <span className={`${styles.TypeText}`}></span>
+          </div> */}
+          <div className={`${styles.HeroText}`}>
+            We create <input placeholder="your story" ref={heroInput}></input>
           </div>
         </div>
       </section>
@@ -80,10 +89,24 @@ export default function Home() {
       <section id='projects' className={styles.Projects}>
         <div className={`${styles.ProjectsInner} fade-in`}>
           <Link href='/point-cloud-creative'>
-            <img src='/images/pcc.png' className={`fade-in`} />
+            <div className={`${styles.ImageContainer}`}>
+              <img src='/images/pcc.png' className={`fade-in`} />
+            </div>
           </Link>
           <Link href='/charisma-social'>
-            <img src='/images/charisma.png' className={`fade-in`} />
+            <div className={`${styles.ImageContainer}`}>
+              <img src='/images/charisma.png' className={`fade-in`} />
+            </div>
+          </Link>
+          <Link href='/point-cloud-creative'>
+            <div className={`${styles.ImageContainer}`}>
+              <img src='/images/pcc.png' className={`fade-in`} />
+            </div>
+          </Link>
+          <Link href='/charisma-social'>
+            <div className={`${styles.ImageContainer}`}>
+              <img src='/images/charisma.png' className={`fade-in`} />
+            </div>
           </Link>
           <Link href='/project4'>
             <div className={`fade-in`}></div>

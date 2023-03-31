@@ -19,6 +19,19 @@
         font-size: 4.2rem;
         font-weight: 600;
         word-break: break-all;
+        
+        input {
+          border: none;
+          height: 200px;
+          font-size: 4.2rem;
+          font-weight: 600;
+          outline: none;
+          caret-shape: underscore;
+
+          :focus {
+            outline: none;
+          }
+        }
 
         .TypeText {
           pointer-events: none;
@@ -43,18 +56,40 @@
       a {
         height: 100%;
         width: 100%;
+        border-radius: 8px;
         background-color: rgb(34, 34, 34);
         overflow: hidden;
 
+        // Align the image containers
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         &:nth-child(1) {
-          background-color: #2f0033;
+          background-image: linear-gradient(45deg, rgb(34, 34, 34), #2f0033);
         }
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          padding-inline: 3rem;
+        &:nth-child(2) {
+          background-image: linear-gradient(45deg, #2f0033, rgb(34, 34, 34));
+        }
+        
+        .ImageContainer {
+          margin-inline: 3rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            // Image needs to align to the bottom of the div to fit correctly?
+            vertical-align: bottom;
+            filter: drop-shadow(0px 0px 20px #111111);
+            transition: filter 0.3s ease;
+
+            &:hover {
+              filter: drop-shadow(0px 0px 40px #141414);
+            }
+          }
         }
 
         &:nth-child(2),
