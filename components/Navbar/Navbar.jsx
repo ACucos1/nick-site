@@ -13,9 +13,9 @@ export const Navbar = () => {
             <li className={`${styles.NavItem} fade-in`}>
               <Link href='/'>Work</Link>
             </li>
-            <li className={`${styles.NavItem} fade-in`}>
+            {/* <li className={`${styles.NavItem} fade-in`}>
               <Link href='/about'>About</Link>
-            </li>
+            </li> */}
             <li className={`${styles.NavItem} fade-in`}>
               <Link href='/contact'>Contact</Link>
             </li>

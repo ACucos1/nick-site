@@ -6,12 +6,7 @@ export default function contact() {
       <div className={styles.ContactInner}>
         <h1>Let&apos;s get started</h1>
         <div className={styles.Blurb}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-          consequatur culpa! Quibusdam soluta, voluptatem quidem ipsam dolorum
-          excepturi architecto fugiat nihil cumque, ut odit similique alias rem
-          repudiandae! In corporis exercitationem sequi sunt qui placeat impedit
-          debitis? Libero impedit quam quis possimus aliquid vel sunt
-          perferendis mollitia fugit laudantium! Incidunt!
+        Unleash Your Brand's Full Potential Today! Ready to elevate your online presence and captivate your audience like never before? Take the first step towards a stunning digital transformation by getting in touch with our dedicated experts at ANS Creative. Simply fill out the contact form below, and we'll connect with you to discuss how we can turn your vision into a reality. Let's embark on this creative journey together and redefine the boundaries of success!
         </div>
         <form
           className={styles.ContactForm}
