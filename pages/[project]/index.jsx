@@ -74,14 +74,9 @@ export default function Project({ project }) {
 
         {project.heading4 && project.body4 && (
           <div className={styles.TextBlock}>
-            <h1>Header 4</h1>
+            <h1>{project.heading4}</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              nobis iste quaerat laboriosam dicta nemo obcaecati ab ducimus
-              ipsam. Qui et inventore eum illum modi hic voluptatum, sit
-              exercitationem minus aliquam voluptates ducimus fugiat cumque,
-              maiores quae laudantium quisquam non adipisci quia voluptatibus
-              laboriosam corporis ratione officia delectus. Vitae, hic?
+              {project.body4}
             </p>
           </div>
         )}
@@ -192,8 +187,12 @@ export async function getStaticProps(context) {
       body3: `To provide Point Cloud Creative with the flexibility and adaptability required to maintain their website's content, 
               we implemented a headless content management system (CMS). This approach decouples the front-end presentation layer from the back-end content management, 
               allowing the client to make updates and changes to their website with ease, without affecting the overall design and functionality.`,
-      heading4: null,
-      body4: null,
+      heading4: 'Lessons',
+      body4: `The Point Cloud Creative website is a shining example of how modern design and innovative technology can come together to create an unforgettable user experience. 
+              With its ultra-sleek, minimalist design, interactive elements, and seamless animations, 
+              the website serves as a powerful showcase of the client's capabilities and vision.
+              Furthermore, the integration of a headless content management system ensures that the website remains adaptable and easily manageable,
+              providing Point Cloud Creative with a future-proof digital presence that will continue to captivate and engage visitors for years to come.`,
       scope: [],
     },
   };
