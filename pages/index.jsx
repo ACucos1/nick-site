@@ -71,7 +71,7 @@ export default function Home() {
           <div
             className={`${styles.HeroText} typewrite`}
             data-period='2000'
-            data-type='["beauty.", "elegance.", "simplicity."]'>
+            data-type='["presence.", "engagement", "impressions."]'>
             We create <span className={`${styles.TypeText}`}></span>
           </div>
         </div>
@@ -85,11 +85,11 @@ export default function Home() {
           <Link href='/charisma-social'>
             <img src='/images/charisma.png' className={`fade-in`} />
           </Link>
-          <Link href='/project4'>
-            <div className={`fade-in`}></div>
+          <Link href='/bonkers-stonkers'>
+            <img src='/images/bs1.png' className={`fade-in`} />
           </Link>
-          <Link href='/project5'>
-            <div className={`fade-in`}></div>
+          <Link href='/alex-cucos'>
+            <img src='/images/ac1.png' className={`fade-in`} />
           </Link>
         </div>
       </section>
