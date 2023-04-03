@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -80,16 +81,32 @@ export default function Home() {
       <section id='projects' className={styles.Projects}>
         <div className={`${styles.ProjectsInner} fade-in`}>
           <Link href='/point-cloud-creative'>
-            <img src='/images/pcc.png' className={`fade-in`} />
+            <img
+              src='/images/pcc.png'
+              className={`fade-in`}
+              alt='Point Cloud Creative - AR Agency'
+            />
           </Link>
           <Link href='/charisma-social'>
-            <img src='/images/charisma.png' className={`fade-in`} />
+            <img
+              src='/images/charisma.png'
+              className={`fade-in`}
+              alt='Charisma Social - NFT Enthusiast Community'
+            />
           </Link>
           <Link href='/bonkers-stonkers'>
-            <img src='/images/bs1.png' className={`fade-in`} />
+            <img
+              src='/images/bs1.png'
+              className={`fade-in`}
+              alt='Bonkers Stonkers - Finance Bros NFT Collection'
+            />
           </Link>
           <Link href='/alex-cucos'>
-            <img src='/images/ac1.png' className={`fade-in`} />
+            <img
+              src='/images/ac1.png'
+              className={`fade-in`}
+              alt='Alex Cucos - Developer Portfolio'
+            />
           </Link>
         </div>
       </section>
