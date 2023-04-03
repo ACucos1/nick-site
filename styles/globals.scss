@@ -58,6 +58,19 @@ button.btn-primary {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .typewrite {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TypeText {
+    display: block;
+    width: 100%;
+    // font-size: 2rem;
+  }
+}
+
 .fade-in {
   opacity: 0;
   pointer-events: all;

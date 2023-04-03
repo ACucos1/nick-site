@@ -8,7 +8,9 @@
     align-items: center;
     .MainInner {
       margin: auto;
-      width: var(--max-width);
+      // width: var(--max-width);
+      width: 100%;
+      max-width: var(--max-width);
       // display: flex;
       // align-items: center;
       // justify-content: flex-start;
