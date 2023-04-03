@@ -72,7 +72,7 @@ export default function Home() {
           <div
             className={`${styles.HeroText} typewrite`}
             data-period='2000'
-            data-type='["presence.", "engagement", "impressions."]'>
+            data-type='["presence.", "engagement.", "impressions."]'>
             We create <span className={`${styles.TypeText}`}></span>
           </div>
         </div>
