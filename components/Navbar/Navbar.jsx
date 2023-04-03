@@ -11,7 +11,7 @@ export const Navbar = () => {
         <div className={`${styles.NavlistWrapper}`}>
           <ul className={`${styles.Navlist}`}>
             <li className={`${styles.NavItem} fade-in`}>
-              <Link href='/'>Work</Link>
+              <Link href='/#projects'>Work</Link>
             </li>
             {/* <li className={`${styles.NavItem} fade-in`}>
               <Link href='/about'>About</Link>
