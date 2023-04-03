@@ -11,10 +11,9 @@ export default function Project({ project }) {
   useEffect(() => {
     // console.log(project);
     console.log(colors);
-    const imgs = document.querySelectorAll("img");
+    const imgs = document.querySelectorAll(".img-wrapper, img");
     imgs.forEach((img) => {
-      img.style.backgroundColor =
-        colors[Math.floor(Math.random() * colors.length)];
+      img.style.backgroundColor = colors[5];
     });
   }, [colors]);
   return (
@@ -25,7 +24,7 @@ export default function Project({ project }) {
 
         <ColorExtractor getColors={getColors}>
           <img
-            className={styles.MainImage}
+            className={`${styles.MainImage} ${styles.Image1}`}
             src={project.img1}
             alt='Header Image'
           />
@@ -65,10 +64,18 @@ export default function Project({ project }) {
 
         {project.img6 && project.img7 && project.img8 && project.img9 && (
           <div className={styles.ImageGrid}>
-            <img src={project.img6} alt='Example Image' />
-            <img src={project.img7} alt='Example Image' />
-            <img src={project.img8} alt='Example Image' />
-            <img src={project.img9} alt='Example Image' />
+            <div className={`${styles.ImageGridItem} img-wrapper`}>
+              <img src={project.img6} alt='Example Image' />
+            </div>
+            <div className={`${styles.ImageGridItem} img-wrapper`}>
+              <img src={project.img7} alt='Example Image' />
+            </div>
+            <div className={`${styles.ImageGridItem} img-wrapper`}>
+              <img src={project.img8} alt='Example Image' />
+            </div>
+            <div className={`${styles.ImageGridItem} img-wrapper`}>
+              <img src={project.img9} alt='Example Image' />
+            </div>
           </div>
         )}
 
@@ -203,12 +210,12 @@ export async function getStaticProps(context) {
     "bonkers-stonkers": {
       img1: "/images/bs1.png",
       img2: "/images/bs2.png",
-      img3: "/images/bs3.png",
+      img3: "/images/bs7.png",
       img4: "/images/bs4.png",
       img5: "/images/bs5.png",
       img6: "/images/bs6.png",
       img7: "/images/bs10.png",
-      img8: "/images/bs7.png",
+      img8: "/images/bs8.png",
       img9: "/images/bs9.png",
       categoryTag: "Website Design & Development",
       title: "Bonkers Stonkers: Merging Finance Bros and NFTs",

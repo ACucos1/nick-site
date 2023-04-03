@@ -28,6 +28,12 @@
       padding: 3rem;
     }
 
+    .Image1 {
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+    }
+
     .TextBlock {
       width: 60%;
       align-self: center;
@@ -57,17 +63,25 @@
       );
       gap: 20px;
       margin-bottom: 8rem;
-      img {
-        width: 100%;
-        // height: 100%;
-        padding: 3rem;
+
+      .ImageGridItem {
+        // align-self: end;
         height: 100%;
-        object-fit: contain;
-        // margin: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:nth-child(2n) {
-          // margin-top: 30%;
           margin-top: 8rem;
+        }
+
+        img {
+          width: 100%;
+          padding: 3rem;
+          max-height: 400px;
+          object-fit: contain;
+          // margin: 0.5rem;
+          // grid-column-start: row-start;
         }
       }
     }
@@ -109,7 +123,7 @@
       }
     }
     .ImageGrid {
-      img {
+      .ImageGridItem {
         &:nth-child(2n) {
           margin-top: 0;
         }
