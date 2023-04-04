@@ -78,7 +78,7 @@
         img {
           width: 100%;
           padding: 3rem;
-          max-height: 400px;
+
           object-fit: contain;
           // margin: 0.5rem;
           // grid-column-start: row-start;
@@ -113,12 +113,12 @@
     h3 {
       // align-self: center;
       max-width: 90%;
-      align-self: center;
+      // align-self: center;
     }
     h1 {
       &.MainHeader {
         font-size: 22px;
-        align-self: center;
+        // align-self: center;
         max-width: 90%;
       }
     }
