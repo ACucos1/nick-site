@@ -163,7 +163,7 @@ export async function getStaticProps(context) {
       heading3: "Design Implementation",
       body3: `Working closely with a third-party designer, we integrated the provided designs into the front-end of the Charisma Social website. 
               These designs focused on creating an engaging and intuitive user interface, 
-              which allows users to navigate the platform with ease while also enjoying a visually captivating experience.`,
+              which allows users to navigate the platform with ease while staying true to the team's rag-tag origins.`,
       heading4: "Prepared for the future",
       body4: `Charisma Social stands as a testament to the power of collaboration and the fusion of design and technology in creating a groundbreaking platform. 
               By effectively integrating front-end designs with advanced blockchain functionality, 
